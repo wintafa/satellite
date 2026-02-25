@@ -1,0 +1,136 @@
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+    url("./hero.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 10%;
+  box-sizing: border-box;
+
+  // Планшет (до 1024px)
+  @media (max-width: 1024px) {
+    padding: 0 5%; // Уменьшаем отступы по бокам
+  }
+
+  // Мобильные (до 768px)
+  @media (max-width: 768px) {
+    padding: 0 20px; // Фиксированный небольшой отступ для телефонов
+    justify-content: center; // На мобильном часто лучше центрировать контент
+    align-items: center;
+    text-align: center; // Текст по центру на мобильном выглядит лучше
+  }
+}
+
+.heroContent {
+  max-width: 1500px;
+  width: 100%; // Добавил, чтобы контент не вылезал
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  color: #fff;
+
+  @media (min-width: 1450px) {
+    max-width: 1320px;
+  }
+  @media (min-width: 1250px) {
+    max-width: 1200px;
+  }
+  // Мобильные
+  @media (max-width: 768px) {
+    // align-items: center; // Центрируем контент внутри hero
+    gap: 1rem; // Уменьшаем отступы между элементами
+  }
+}
+.title {
+  font-family: "BN Bold", sans-serif;
+  font-size: clamp(68px, 12vw, 240px); // ✅ Плавное масштабирование
+  line-height: 0.9;
+  font-weight: 800;
+  margin: 0;
+  text-transform: uppercase;
+  animation: fadeInUp 0.8s ease forwards;
+
+  // Мобильные
+  @media (max-width: 768px) {
+    font-size: clamp(110px, 15vw, 120px); // ✅ Ещё меньше на телефонах
+  }
+}
+
+.subtitle {
+  font-family: "BN Regular", sans-serif;
+  font-size: clamp(24px, 5vw, 103px); // ✅ Плавное масштабирование
+  line-height: 1.2;
+  max-width: 1000px;
+  color: #f2f2f2;
+  margin: 0;
+  text-transform: uppercase;
+  animation: fadeInUp 0.8s ease 0.2s forwards;
+  opacity: 0;
+
+  // Мобильные
+  @media (max-width: 768px) {
+    font-size: clamp(20px, 6vw, 32px); // ✅ Адаптивно для телефонов
+    max-width: 100%;
+    text-align: left;
+  }
+}
+
+.heroBtn {
+  font-family: "WMFD";
+  margin-top: 1rem;
+  font-size: 20px;
+  
+  // Desktop styles
+  min-width: 462px;
+  min-height: 70px;
+  
+  border-radius: 21px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.26);
+  border: 1px solid rgba(255, 255, 255, 1);
+  backdrop-filter: blur(20.4px);
+  -webkit-backdrop-filter: blur(100px);
+  color: #FFFFFF;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.8s ease 0.4s forwards;
+  opacity: 0;
+  white-space: nowrap; // Чтобы текст кнопки не переносился на десктопе
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #fff;
+  }
+
+  // Планшет (до 1024px)
+  @media (max-width: 1024px) {
+    min-width: 350px; // Чуть уже кнопка
+    font-size: 18px;
+  }
+
+  // Мобильные (до 768px)
+  @media (max-width: 768px) {
+    width: 100%; // Кнопка на всю ширину
+    max-width: 400px; // Но не шире 400px, чтобы не была гигантской на планшетах
+    min-width: auto; // Сбрасываем фиксированную ширину
+    min-height: 55px; // Уменьшаем высоту для удобства нажатия пальцем
+    font-size: 16px;
+    border-radius: 15px;
+    white-space: normal; // Разрешаем перенос текста, если он длинный
+    padding: 0 20px;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
