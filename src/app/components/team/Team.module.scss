@@ -41,6 +41,7 @@
   width: 100%; // ✅ Карточка занимает всю ширину ячейки
   max-width: 100%; // ✅ Убрал фиксированные 346px
   cursor: pointer;
+  padding-bottom: 15px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 30px;
   overflow: hidden;

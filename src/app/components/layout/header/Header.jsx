@@ -54,7 +54,7 @@ export default function Header() {
 
           <div className={styles.actions}>
             <Link href="https://max.ru/join/AQszKoiHD87t1tdz9A1djDizYMBonilkI1tXLEo8jYU" target="_blank" className={`${styles.socialBtn} ${styles.maxBtn}`}>
-              <Image src="/icons/tg.svg" alt="MAX" width={32} height={32}/>
+              <Image src="/icons/maxWhite1.svg" alt="MAX" width={32} height={32}/>
               <span>MAX</span>
             </Link>
             <Link href="https://vk.com/..." target="_blank" className={styles.socialBtn}>
@@ -112,11 +112,11 @@ export default function Header() {
             </Link>
 
             <div className={styles.socials}>
-              <Link href="https://t.me/..." target="_blank">
-                <Image src="/icons/tg.svg" alt="telegram" width={32} height={32} />
+              <Link href="https://max.ru/join/AQszKoiHD87t1tdz9A1djDizYMBonilkI1tXLEo8jYU" target="_blank">
+                <Image src="/icons/maxWhite1.svg" alt="MAX" width={32} height={32} />
               </Link>
               <Link href="https://vk.ru/club230186395" target="_blank">
-                <Image src="/icons/vk.svg" alt="vk" width={32} height={32} />
+                <Image src="/icons/vk.svg" alt="VK" width={32} height={32} />
               </Link>
             </div>
           </div>
